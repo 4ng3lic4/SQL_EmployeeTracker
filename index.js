@@ -11,12 +11,12 @@ const db = mysql.createConnection(
         password: '12345678',
         database: 'employeetracker_db'
     },
-    console.log(`Connected to the movies_db database.`)
+    console.log(`Connected to the employeetracker_db database.`)
 );
 
 function menu() {
     inquirer.prompt({
-        type: "input",
+        type: "list",
         name: "action",
         message: "what would you like to do?",
         choices: [
@@ -73,3 +73,5 @@ function addDepartment(){
         message: "what what is the department you want to add?",
     })
 }
+
+menu();
